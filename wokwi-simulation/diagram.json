@@ -1,0 +1,107 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 160, "left": 20, "attrs": {} },
+      {
+        "type": "wokwi-slide-potentiometer",
+        "id": "potentiometer",
+        "top": 100.07,
+        "left": 372.33,
+        "rotate": 270,
+        "attrs": { "travelLength": "90" }
+      },
+      {
+        "type": "wokwi-servo",
+        "id": "servo",
+        "top": -41.05,
+        "left": 374.12,
+        "attrs": { "horncolor": "black" }
+      },
+      {
+        "type": "wokwi-servo",
+        "id": "servo1",
+        "top": 218.26,
+        "left": 647.61,
+        "attrs": { "horncolor": "black" }
+      },
+      {
+        "type": "wokwi-slide-potentiometer",
+        "id": "potentiometer1",
+        "top": 96.97,
+        "left": 655.28,
+        "rotate": 270,
+        "attrs": { "travelLength": "90" }
+      },
+      {
+        "type": "wokwi-servo",
+        "id": "servo2",
+        "top": 222.26,
+        "left": 954.2,
+        "attrs": { "horncolor": "black" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": -34.41,
+        "left": 965.45,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": -178.61,
+        "left": 147.51,
+        "attrs": { "value": "1000" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": -34.4,
+        "left": 1026.91,
+        "attrs": { "color": "blue" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": -164.42,
+        "left": 180.61,
+        "attrs": { "value": "1000" }
+      },
+      {
+        "type": "wokwi-slide-potentiometer",
+        "id": "pot1",
+        "top": -43.07,
+        "left": 1092.09,
+        "rotate": 180,
+        "attrs": { "travelLength": "30" }
+      }
+    ],
+    "connections": [
+      [ "potentiometer:SIG", "uno:A0", "green", [ "v47.61", "h-348.07" ] ],
+      [ "potentiometer:VCC", "uno:5V", "red", [ "v32.57", "h-3.83" ] ],
+      [ "potentiometer:GND", "uno:GND.1", "black", [ "v-64.18", "h-2.16" ] ],
+      [ "servo:GND", "uno:GND.1", "black", [ "h-0.24", "v-131.36", "h-56.8" ] ],
+      [ "servo:V+", "uno:5V", "red", [ "h0" ] ],
+      [ "servo:PWM", "uno:9", "green", [ "h0" ] ],
+      [ "servo1:GND", "uno:GND.1", "black", [ "h1.87", "v-391.6", "h-520.08" ] ],
+      [ "servo1:V+", "uno:5V", "green", [ "h4.24", "v130.79", "h-475.16" ] ],
+      [ "servo1:PWM", "uno:8", "green", [ "h6.6", "v-396.42", "h-501.17" ] ],
+      [ "potentiometer1:SIG", "uno:A1", "green", [ "v47.61", "h-348.07" ] ],
+      [ "potentiometer1:VCC", "uno:5V", "red", [ "v32.57", "h-3.83" ] ],
+      [ "potentiometer1:GND", "uno:GND.1", "black", [ "v-64.18", "h-2.16" ] ],
+      [ "servo2:GND", "uno:GND.1", "black", [ "h-11.58", "v-383.78", "h-780.12" ] ],
+      [ "servo2:V+", "uno:5V", "green", [ "h-2.13", "v136.25", "h-777.75" ] ],
+      [ "servo2:PWM", "uno:7", "green", [ "h-11.58", "v-393.33", "h-765.93" ] ],
+      [ "led1:A", "r1:2", "green", [ "v22.72", "h-45.47", "v-189.12" ] ],
+      [ "r1:1", "uno:13", "green", [ "v-3.38", "h-8.65" ] ],
+      [ "led1:C", "uno:GND.1", "green", [ "v1.45", "h-40.2", "v-141.84", "h-810.85", "v-7.09" ] ],
+      [ "led2:A", "r2:2", "green", [ "v13.26", "h-123.48", "v-2.36" ] ],
+      [ "led2:C", "uno:GND.1", "green", [ "v22.71", "h-118.21", "v-189.12", "h-829.26", "v24.14" ] ],
+      [ "r2:1", "uno:12", "green", [ "v0" ] ],
+      [ "pot1:GND", "uno:GND.1", "black", [ "v-185.12", "h-5.88" ] ],
+      [ "pot1:SIG", "uno:A2", "green", [ "h61.35", "v423.87", "h-1092.92" ] ],
+      [ "pot1:VCC", "uno:5V", "red", [ "h-14.62", "v431.93", "h-1104.07" ] ]
+    ]
+  }
